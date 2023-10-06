@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PRACTICA 3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>PRACTICA 3</h1>
+
+        <div class="container mt-5">
+            <h3 class="mt-3"><span class="badge bg-secondary">Selecciona la opcion:</span></h3>
+            <div class="form-group">
+                <select class="form-control" id="practica" onchange="cambiarFormulario()">
+                    <option value="act11">ACTIVIDAD 11</option>
+                    <option value="act12">ACTIVIDAD 12</option>
+                    <option value="act13">ACTIVIDAD 13</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="act11" style="display: none;">
+            <h2>Tabla de Números Aleatorios</h2>
+            <div style="display: flex;">
+                <table id="matrizTable"></table>
+                <table class="resultados">
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                    </tr>
+                    <tr>
+                        <td id="resultadoA"></td>
+                        <td id="resultadoB"></td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="resultados">
+                <table >
+                    <tr>
+                        <th>C</th>
+                    </tr>
+                    <tr>
+                        <td id="resultadoC"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>D</th>
+                    </tr>
+                    <tr>
+                        <td id="resultadoD"></td>
+                    </tr>
+                </table>
+            </div>    
+        </div>
+
+        <div id="act12" style="display: none;">
+            <h1>Tabla de Ventas</h1>
+
+            <table id="tabla-ventas">
+                <tr>
+                    <th>Mes</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+                <!-- Los valores se llenarán dinámicamente desde el script -->
+            </table>
+
+            <button onclick="calcularVentas()">Calcular Ventas</button>
+
+
+            <h2>Resultados:</h2>
+            <div id="resultados"></div>
+        </div>
+
+        <div id="act13" style="display: none;">
+            <h1>Tabla de Calificaciones</h1>
+
+                <table id="tabla-calificaciones">
+                    <tr>
+                        <th>Alumno</th>
+                        <th>Parcial 1</th>
+                        <th>Parcial 2</th>
+                        <th>Parcial 3</th>
+                    </tr>
+                </table>
+
+                <h2>Resultados:</h2>
+                <p>Promedio de cada alumno:</p>
+                <ul id="promedios-alumnos"></ul>
+                <p>Promedio más alto: <span id="promedio-mas-alto"></span></p>
+                <p>Promedio más bajo: <span id="promedio-mas-bajo"></span></p>
+                <p>Cantidad de parciales reprobados: <span id="parciales-reprobados"></span></p>
+                <p>Distribución de las calificaciones finales:</p>
+                <ul id="distribucion-calificaciones"></ul>
+
+                <button onclick="calcularCalificaciones()">Calcular Calificaciones</button>
+
+
+        
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
